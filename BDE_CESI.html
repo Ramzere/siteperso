@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page BDE CESI</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="icon" href="images/remi.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Bienvenue sur ma page BDE CESI</h1>
+            <button id="dark-mode-toggle" onclick="toggleDarkMode()"><i class="fas fa-sun"></i></button>
+        </div>
+    </header>
+    <main>
+        <button class="back-button" onclick="window.location.href='./Accueil.html';"><i class="fas fa-arrow-left" aria-hidden="true"></i> <span>RETOUR ACCUEIL</span></button>
+        
+        <div class="container">
+            <section class="section">
+                <h3>IMPORTANT</h3>
+                <ul>
+                    <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
+                    <li><a href="https://drive.google.com/drive/u/0/folders/1itrEGWbXUrcI94Lxava5US5QbAqCpscB" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" aria-hidden="true"></i> Mail</a></li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h3>Communication</h3>
+                <ul>
+                    <li><a href="myapp:./Fichier_a_lancer/test.txt"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok" aria-hidden="true"></i> TikTok</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-link" aria-hidden="true"></i> Linktree</a></li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h3>Finance</h3>
+                <ul>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-credit-card" aria-hidden="true"></i> Sumup</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-university" aria-hidden="true"></i> Service Public</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+	
+	<!-- Footer avec le copyright -->
+    <footer>
+        <p>&copy; 2024 Rémi Rodriguez. Tous droits réservés.</p>
+    </footer>
+	
+	<script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
