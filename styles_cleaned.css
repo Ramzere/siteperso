@@ -1,0 +1,572 @@
+/* Définition des variables de couleur pour le mode clair */
+:root {
+    --bg-color: #121212;
+    /* Couleur de fond */
+    --text-color: #e0e0e0;
+    /* Couleur du texte */
+    --button-bg: #1f1f1f;
+    /* Couleur de fond des boutons */
+    --button-hover-bg: #333333;
+    /* Couleur de fond des boutons au survol */
+    --section-bg: #1f1f1f;
+    /* Couleur de fond des sections */
+    --section-hover-bg: #333333;
+    /* Couleur de fond des sections au survol */
+    --section-shadow: rgba(255, 255, 255, 0.1);
+    /* Ombre des sections */
+    --section-hover-shadow: rgba(255, 255, 255, 0.2);
+    /* Ombre des sections au survol */
+    --link-color: #e0e0e0;
+    /* Couleur des liens */
+    --link-hover-color: #ffffff;
+}
+
+/* Définition des variables de couleur pour le mode sombre */
+body.dark-mode {
+    --bg-color: #f4f4f9;
+    /* Couleur de fond */
+    --text-color: #343a40;
+    /* Couleur du texte */
+    --button-bg: #007bff;
+    /* Couleur de fond des boutons */
+    --button-hover-bg: #0056b3;
+    /* Couleur de fond des boutons au survol */
+    --section-bg: white;
+    /* Couleur de fond des sections */
+    --section-hover-bg: rgba(0, 0, 0, 0.1);
+    /* Couleur de fond des sections au survol */
+    --section-shadow: rgba(0, 0, 0, 0.1);
+    /* Ombre des sections */
+    --section-hover-shadow: rgba(0, 0, 0, 0.2);
+    /* Ombre des sections au survol */
+    --link-color: #007bff;
+    /* Couleur des liens */
+    --link-hover-color: #0056b3;
+}
+
+/* Style de base pour le corps du document en utilisant flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
+    /* S'assure que le corps prend toute la hauteur de la fenêtre */
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* S'assure que le main prend tout l'espace disponible */
+main {
+    flex: 1;
+}
+
+header, main {
+    text-align: center;
+    /* Centre le texte */
+    position: relative;
+}
+
+/* Conteneur flexible pour le header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* Espace entre les éléments */
+    align-items: center;
+    /* Aligne verticalement les éléments au centre */
+	padding: 10px 20px;
+}
+
+/* Titre centré */
+.header-container h1 {
+    flex: 1;
+    /* Prend tout l'espace disponible */
+    text-align: center;
+    /* Centre le texte */
+    margin: 0;
+}
+
+/* Bouton Dark Mode en haut à droite */
+/* Bouton Dark Mode */
+#dark-mode-toggle {
+    background-color: var(--button-bg);
+    /* Couleur de fond */
+    color: white;
+    /* Couleur du texte */
+    border: none;
+    /* Pas de bordure */
+    border-radius: 50px;
+    /* Angles arrondis */
+    padding: 10px 20px;
+    /* Padding interne */
+    cursor: pointer;
+    /* Curseur pointeur */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--button-hover-bg);
+    /* Change la couleur de fond au survol */
+    transform: scale(1.05);
+}
+
+/* Styles pour les titres */
+h1, h2 {
+    color: var(--text-color);
+    /* Couleur du texte */
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+    /* Taille de la police */
+    margin-bottom: 20px;
+}
+
+/* Conteneur pour les boutons de navigation */
+.button-container {
+    text-align: center;
+    /* Centre le texte */
+    margin-bottom: 20px;
+}
+
+/* Style de base pour les boutons et le bouton de retour */
+button, .back-button {
+    display: inline-block;
+    /* Affiche en ligne */
+    margin: 10px;
+    /* Marge autour des boutons */
+    padding: 10px 20px;
+    /* Padding interne */
+    font-size: 16px;
+    /* Taille de la police */
+    background-color: var(--button-bg);
+    /* Couleur de fond */
+    color: white;
+    /* Couleur du texte */
+    border: none;
+    /* Pas de bordure */
+    border-radius: 50px;
+    /* Angles arrondis */
+    cursor: pointer;
+    /* Curseur pointeur */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transition pour les effets */
+    text-align: center;
+}
+
+button:hover, .back-button:hover {
+    background-color: var(--button-hover-bg);
+    /* Change la couleur de fond au survol */
+    transform: scale(1.05);
+}
+
+/* Ajoute de l'espace entre l'icône et le texte des boutons */
+button span, .back-button span {
+    margin-left: 8px;
+}
+
+/* Conteneur flexible pour les sections */
+.container {
+    display: grid;
+    /* Utilise la grille CSS */
+    grid-template-columns: repeat(4, 1fr);
+    /* Quatre colonnes */
+    gap: 20px;
+    /* Espace entre les éléments */
+    margin-top: 20px;
+}
+
+/* Style de base pour chaque section */
+.section {
+    background-color: var(--section-bg);
+    /* Fond de la section */
+    border-radius: 10px;
+    /* Angles arrondis */
+    box-shadow: 0 4px 8px var(--section-shadow);
+    /* Ombre légère */
+    padding: 20px;
+    /* Padding interne */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transition pour les effets */
+    text-align: left;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    /* Déplace vers le haut au survol */
+    box-shadow: 0 8px 16px var(--section-hover-shadow);
+}
+
+/* Styles pour les titres des sections */
+.section h3 {
+    font-size: 20px;
+    /* Taille de la police */
+    color: var(--text-color);
+    /* Couleur du texte */
+    margin-top: 0;
+    /* Supprime la marge en haut */
+    text-align: center;
+    /* Centre le texte */
+    font-weight: bold;
+    /* Texte en gras */
+    margin-bottom: 10px;
+}
+
+/* Ajout du style pour le conteneur de calendrier */
+.calendar-container {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+.calendar-container iframe {
+    border: none;
+    width: 100%;
+    height: 800px;
+    /* Augmenté pour plus de visibilité */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+/* Mode sombre pour le conteneur de calendrier */
+body.dark-mode .calendar-container {
+    background-color: var(--section-bg);
+    box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+body.dark-mode .calendar-container iframe {
+    box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+/* Ajout du style pour le conteneur météo */
+.weather-container {
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--section-shadow);
+    padding: 20px;
+    width: 250px;
+    /* Largeur du cadre */
+    text-align: left;
+    z-index: 1000;
+}
+
+.weather-container h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.weather-container p {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+/* Conteneur flexible pour la météo et la barre de recherche */
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    /* Espace entre les éléments */
+    align-items: center;
+    /* Aligne verticalement les éléments au centre */
+    margin-bottom: 20px;
+}
+
+/* Conteneur flexible pour la barre de recherche et le bouton Dark Mode */
+.search-darkmode-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles pour la barre de recherche */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--button-hover-bg);
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+    outline: none;
+}
+
+#search-button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--button-hover-bg);
+    border-left: none;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Mode sombre pour le conteneur météo */
+body.dark-mode .weather-container {
+    background-color: var(--section-bg);
+    box-shadow: 0 4px 8px var(--section-shadow);
+}
+
+body.dark-mode .weather-container p {
+    color: var(--text-color);
+}
+
+/* Styles pour les résultats de recherche */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--section-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--section-hover-shadow);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+section p {
+    color: var(--text-color);
+}
+
+/* Style pour le footer */
+footer {
+    background-color: var(--section-bg);
+    /* Fond du footer */
+    color: var(--text-color);
+    /* Couleur du texte */
+    text-align: center;
+    /* Centre le texte */
+    padding: 10px 0;
+    /* Padding en haut et en bas */
+    margin-top: 20px;
+    /* Marge en haut */
+    border-top: 1px solid var(--button-hover-bg);
+}
+
+footer p {
+    margin: 0;
+    /* Supprime la marge */
+    font-size: 14px;
+}
+
+/* Mode sombre pour le footer */
+body.dark-mode footer {
+    background-color: var(--section-bg);
+    /* Fond du footer en mode sombre */
+    color: var(--text-color);
+    /* Couleur du texte en mode sombre */
+    border-top: 1px solid var(--button-hover-bg);
+}
+
+/* Styles pour les listes */
+ul {
+    list-style-type: none;
+    /* Supprime les puces */
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Styles pour les liens */
+a {
+    text-decoration: none;
+    /* Supprime la décoration */
+    color: var(--link-color);
+    /* Couleur des liens */
+    font-weight: bold;
+    /* Texte en gras */
+    transition: color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    /* Change la couleur du texte au survol */
+    transform: scale(1.05);
+}
+
+/* Ajoute de l'espace entre l'icône et le texte des liens */
+a i {
+    margin-right: 8px;
+}
+
+/* Classe pour le texte uniquement lisible par les lecteurs d'écran */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Couleurs spécifiques pour les boutons de navigation */
+.leroy-button {
+    background-color: #007BFF;
+}
+
+.cesi-button, .bde_cesi-button {
+    background-color: #ffc107;
+}
+
+.perso-button {
+    background-color: #28a745;
+}
+
+.back-button {
+    background-color: #007BFF;
+}
+
+/* Adaptation pour les écrans moyens */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+}
+
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+/* Adaptation pour les très petits écrans */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+}
+
+button {
+    width: 100%;
+    /* Boutons en pleine largeur */
+        font-size: 14px;
+}
+
+.container {
+    grid-template-columns: 1fr;
+}
+
+}
+
+/* Style de la modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: var(--section-bg);
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.modal-content input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--button-hover-bg);
+}
+
+.modal-content button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.password-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.password-table th,
+.password-table td {
+    border: 1px solid var(--button-hover-bg);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.password-table th {
+    background-color: var(--button-bg);
+    color: white;
+}
+
+.password-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .password-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#mdpList h5 {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    border-left: 4px solid var(--button-bg);
+    padding-left: 10px;
+}
