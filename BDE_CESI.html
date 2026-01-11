@@ -1,173 +1,293 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ma Page BDE CESI</title>
-    <link rel="stylesheet" href="styles.css">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<link rel="icon" href="images/remi.png" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="images/remi.png" type="image/x-icon" />
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <h1>Bienvenue sur ma page BDE CESI</h1>
-            <button id="dark-mode-toggle" onclick="toggleDarkMode()"><i class="fas fa-sun"></i></button>
-        </div>
+      <div class="header-container">
+        <h1>Bienvenue sur ma page BDE CESI</h1>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
     </header>
     <main>
-        <button class="back-button" onclick="window.location.href='./index.html';"><i class="fas fa-arrow-left" aria-hidden="true"></i> <span>RETOUR ACCUEIL</span></button>
-        
-        <div class="container">
-			<section class="section">
-				<h3>Accès sécurisé</h3>
-				<button onclick="openPasswordModal()"><i class="fas fa-lock"></i> Accès MDP</button>
-			</section>
-			
-            <section class="section">
-                <h3>IMPORTANT</h3>
-                <ul>
-					<li><a href="https://drive.google.com/drive/u/0/folders/1PhOxsWorP9bNkwnCbt54bKs8PVQ9vOb7" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a></li>
-                </ul>
-            </section>
-            
-            <section class="section">
-                <h3>Communication</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/bdecesitoulouse/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok" aria-hidden="true"></i> TikTok</a></li>
-                    <li><a href="https://linktr.ee/admin" target="_blank" rel="noopener noreferrer"><i class="fas fa-link" aria-hidden="true"></i> Linktree</a></li>
-                </ul>
-            </section>
+      <button
+        class="back-button"
+        onclick="window.location.href='./index.html';"
+      >
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        <span>RETOUR ACCUEIL</span>
+      </button>
 
-            <section class="section">
-                <h3>Finance</h3>
-                <ul>
-                    <li><a href="https://me.sumup.com/fr-fr/dashboard" target="_blank" rel="noopener noreferrer"><i class="fas fa-credit-card" aria-hidden="true"></i> Sumup</a></li>
-                    <li><a href="https://www.service-public.fr/compte/tableau-de-bord" target="_blank" rel="noopener noreferrer"><i class="fas fa-university" aria-hidden="true"></i> Service Public</a></li>
-                </ul>
-            </section>
-        </div>
+      <div class="container">
+        <section class="section">
+          <h3>Accès sécurisé</h3>
+          <button onclick="openPasswordModal()">
+            <i class="fas fa-lock"></i> Accès MDP
+          </button>
+        </section>
 
-		<!-- Intégration du calendrier Google -->
-		<div class="calendar-container">
-			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&showPrint=0&mode=WEEK&title&showTitle=0&src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=YmRlLXRvdWxvdXNlQHZpYWNlc2kuZnI&color=%237986CB&color=%23D50000" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-		</div>
+        <section class="section">
+          <h3>IMPORTANT</h3>
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/drive/u/0/folders/1EP4TGwrWa_iywquR0BzIyPeFh2D0-cCn"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>Communication</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.instagram.com/bdecesitoulouse/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram" aria-hidden="true"></i>
+                Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-tiktok" aria-hidden="true"></i> TikTok</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://linktr.ee/admin"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-link" aria-hidden="true"></i> Linktree</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h3>Finance</h3>
+          <ul>
+            <li>
+              <a
+                href="https://me.sumup.com/fr-fr/dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-credit-card" aria-hidden="true"></i> Sumup</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.service-public.fr/compte/tableau-de-bord"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-university" aria-hidden="true"></i> Service
+                Public</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Intégration du calendrier Google -->
+      <div class="calendar-container">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=7f411b9bdf53cdffb23aeeffe64afce3d1479b1ecb15b2fab2fa9e208dfad371%40group.calendar.google.com&ctz=Europe%2FParis"
+          style="border: solid 1px #777"
+          width="800"
+          height="600"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
     </main>
-	
-	
 
-	<!-- Fenêtre modale cachée au départ -->
-	<div id="passwordModal" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closePasswordModal()">&times;</span>
-			<h3>Entrez le mot de passe</h3>
-			<input type="password" id="passwordInput" placeholder="Mot de passe">
-			<button onclick="checkPassword()">Valider</button>
-			<div id="mdpList" style="display:none; margin-top:15px;">
-				<h4 style="margin-bottom: 10px;">🔐 Informations d'accès</h4>
+    <!-- Fenêtre modale cachée au départ -->
+    <div id="passwordModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePasswordModal()">&times;</span>
+        <h3>Entrez le mot de passe</h3>
+        <input type="password" id="passwordInput" placeholder="Mot de passe" />
+        <button onclick="checkPassword()">Valider</button>
+        <div id="mdpList" style="display: none; margin-top: 15px">
+          <h4 style="margin-bottom: 10px">🔐 Informations d'accès</h4>
 
-				<!-- COMMUNICATION -->
-				<h5 style="margin-top: 20px;">📧 Communication</h5>
-				<table class="password-table">
-					<thead>
-						<tr><th>Compte</th><th>Utilisateur</th><th>Mot de passe</th></tr>
-					</thead>
-					<tbody>
-						<tr><td>OUTLOOK</td><td>bde-toulouse@viacesi.fr</td><td>BDE/2023?</td></tr>
-						<tr><td>OUTLOOK Partenariat</td><td>bde-toulouse-partenariat@outlook.fr</td><td>BDE/2024/part?</td></tr>
-						<tr><td>INSTAGRAM</td><td>bde-toulouse@viacesi.fr</td><td>Bde24/25!</td></tr>
-						<tr><td>TIKTOK</td><td>bde-toulouse@viacesi.fr</td><td>2023//bdetls&&</td></tr>
-						<tr><td>FACEBOOK</td><td>bde-toulouse@viacesi.fr</td><td>BDE/2023?</td></tr>
-						<tr><td>LINKEDIN</td><td>bde-toulouse@viacesi.fr</td><td>BDE/2023?</td></tr>
-						<tr><td>LINKTREE</td><td>bde-toulouse@viacesi.fr+</td><td>BDECESI2023</td></tr>
-					</tbody>
-				</table>
+          <!-- COMMUNICATION -->
+          <h5 style="margin-top: 20px">📧 Communication</h5>
+          <table class="password-table">
+            <thead>
+              <tr>
+                <th>Compte</th>
+                <th>Utilisateur</th>
+                <th>Mot de passe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OUTLOOK</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDE/202526?!</td>
+              </tr>
+              <tr>
+                <td>OUTLOOK Partenariat</td>
+                <td>bde-toulouse-partenariat@outlook.fr</td>
+                <td>BDE/2024/part?</td>
+              </tr>
+              <tr>
+                <td>INSTAGRAM</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>Bde25/26!!</td>
+              </tr>
+              <tr>
+                <td>TIKTOK</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>2023//bdetls&&</td>
+              </tr>
+              <tr>
+                <td>FACEBOOK</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDE/2023?</td>
+              </tr>
+              <tr>
+                <td>LINKEDIN</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDE/2023?</td>
+              </tr>
+              <tr>
+                <td>LINKTREE</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDECESI2023</td>
+              </tr>
+              <tr>
+                <td>CANVA</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDE/2026?!Canva</td>
+              </tr>
+            </tbody>
+          </table>
 
-				<!-- FINANCE -->
-				<h5 style="margin-top: 20px;">💰 Finance</h5>
-				<table class="password-table">
-					<thead>
-						<tr><th>Compte</th><th>Utilisateur</th><th>Mot de passe</th></tr>
-					</thead>
-					<tbody>
-						<tr><td>HELLO ASSO</td><td>bde-toulouse@viacesi.fr</td><td>BDE2425Toulouse31!</td></tr>
-						<tr><td>SUMUP</td><td>bde-toulouse@viacesi.fr</td><td>BDETauros2023</td></tr>
-						<tr><td>CARREFOUR</td><td>bde-toulouse@viacesi.fr</td><td>cR3@M2022!</td></tr>
-					</tbody>
-				</table>
+          <!-- FINANCE -->
+          <h5 style="margin-top: 20px">💰 Finance</h5>
+          <table class="password-table">
+            <thead>
+              <tr>
+                <th>Compte</th>
+                <th>Utilisateur</th>
+                <th>Mot de passe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HELLO ASSO</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDE2425Toulouse31!</td>
+              </tr>
+              <tr>
+                <td>SUMUP</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDETauros2023</td>
+              </tr>
+              <tr>
+                <td>CARREFOUR</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>cR3@M2022!</td>
+              </tr>
+            </tbody>
+          </table>
 
-				<!-- OUTILS ADMIN -->
-				<h5 style="margin-top: 20px;">📊 Outils administratifs</h5>
-				<table class="password-table">
-					<thead>
-						<tr><th>Compte</th><th>Utilisateur</th><th>Mot de passe</th></tr>
-					</thead>
-					<tbody>
-						<tr><td>KAHOOT</td><td>bde-toulouse@viacesi.fr</td><td>BDETOULOUSE</td></tr>
-						<tr><td>SERVICE PUBLIC</td><td>bde-toulouse@viacesi.fr</td><td>BDEToulouse31!</td></tr>
+          <!-- OUTILS ADMIN -->
+          <h5 style="margin-top: 20px">📊 Outils administratifs</h5>
+          <table class="password-table">
+            <thead>
+              <tr>
+                <th>Compte</th>
+                <th>Utilisateur</th>
+                <th>Mot de passe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>KAHOOT</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDETOULOUSE</td>
+              </tr>
+              <tr>
+                <td>SERVICE PUBLIC</td>
+                <td>bde-toulouse@viacesi.fr</td>
+                <td>BDEToulouse31!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-
-	
-	<!-- Footer avec le copyright -->
+    <!-- Footer avec le copyright -->
     <footer>
-        <p>&copy; 2024 Rémi Rodriguez. Tous droits réservés.</p>
+      <p>&copy; 2024 Rémi Rodriguez. Tous droits réservés.</p>
     </footer>
-	
-	<script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
     </script>
 
-	<script>
-		function openPasswordModal() {
-			const modal = document.getElementById("passwordModal");
-			const input = document.getElementById("passwordInput");
-			const mdpList = document.getElementById("mdpList");
+    <script>
+      function openPasswordModal() {
+        const modal = document.getElementById("passwordModal");
+        const input = document.getElementById("passwordInput");
+        const mdpList = document.getElementById("mdpList");
 
-			modal.style.display = "block";
-			mdpList.style.display = "none";
-			input.value = "";
+        modal.style.display = "block";
+        mdpList.style.display = "none";
+        input.value = "";
 
-			// Focus sur l'input
-			setTimeout(() => input.focus(), 100);
+        // Focus sur l'input
+        setTimeout(() => input.focus(), 100);
 
-			// Ajouter l'écouteur pour la touche Entrée
-			input.onkeypress = function(event) {
-				if (event.key === "Enter") {
-					event.preventDefault();
-					checkPassword();
-				}
-			};
-		}
+        // Ajouter l'écouteur pour la touche Entrée
+        input.onkeypress = function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            checkPassword();
+          }
+        };
+      }
 
-		function closePasswordModal() {
-			document.getElementById("passwordModal").style.display = "none";
-		}
+      function closePasswordModal() {
+        document.getElementById("passwordModal").style.display = "none";
+      }
 
-		function checkPassword() {
-			const input = document.getElementById("passwordInput").value;
-			if (input === "194862") {
-				document.getElementById("mdpList").style.display = "block";
-			} else {
-				closePasswordModal();
-			}
-		}
+      function checkPassword() {
+        const input = document.getElementById("passwordInput").value;
+        if (input === "194862") {
+          document.getElementById("mdpList").style.display = "block";
+        } else {
+          closePasswordModal();
+        }
+      }
 
-		window.onclick = function(event) {
-			const modal = document.getElementById("passwordModal");
-			if (event.target === modal) {
-				modal.style.display = "none";
-			}
-		};
-	</script>
-
-
-</body>
+      window.onclick = function (event) {
+        const modal = document.getElementById("passwordModal");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
 </html>
